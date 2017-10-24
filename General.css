@@ -1,0 +1,35 @@
+header
+	{
+		font-size:35px;
+		color: black;
+		font-family: Cambria;
+		text-align: center;
+	}
+body 
+	{
+		background-color: lightblue
+	}
+td:hover 
+	{
+		background-color: #7BD4E8;
+	}
+table
+	{
+		width:100%;
+		height:100%;
+		padding: 2px;
+		border-spacing: 5px;
+		border-collapse:3px solid black ;
+}
+table,td,td 
+	{
+		border:thick solid black;
+	}
+tbody 
+	{
+		background-color: beige;
+		font-family: Cambria;
+		font-size: 22px;
+		text-align: center;
+		border: 3px solid black;
+	}
