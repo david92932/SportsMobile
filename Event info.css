@@ -28,7 +28,7 @@ body
 span /*titlebox*/
 {
   position: fixed;
-  left: 115px;
+  left: 70px;
   top: 5px;
 }
 fieldset /*Info boundary*/
@@ -58,7 +58,36 @@ tbody
 {
   display: block;
 }
-
+.time
+{
+  display: block;
+}
+.location
+{
+  display: block;
+}
+.numberattending
+{
+  display: block;
+}
+.Commit
+{
+  display: inline-block;
+  float: left;
+  position: fixed;
+  left: 90px;
+  border: 4px solid greenyellow;
+}
+.Commit:hover {background-color: lightblue;}
+.Decline
+{
+  display: inline-block;
+  float: left;
+  position: fixed;
+  left: 210px;
+  border: 4px solid greenyellow;
+}
+.Decline:hover {background-color: lightblue;}
 .blocks
 {
   width: 100%;

@@ -1,0 +1,49 @@
+header
+	{
+		background-color: greenyellow;
+		height: 50px;
+		text-align: center;
+		font-size: 32px;
+		margin: 0px;
+		position: fixed;
+		left: 0px;
+		right: 0px;
+}
+a
+  {
+    float: left;
+    position: fixed;
+    top: 7px;
+    left: 7px;
+    color: Black;
+  }
+body
+	{
+		background-color: black;
+	  margin: inherit;
+	  font-size: 22px;
+}
+.body
+{
+	background-color: greenyellow;
+	border: 8px solid greenyellow;
+	padding-bottom: 2px;
+}
+.submit
+{
+  width: 60px;
+  text-align: center;
+  background-color: black;
+  color: greenyellow;
+}
+fieldset
+{
+	position: fixed;
+	left: 150px;
+	right: 150px;
+	top: 80px;
+}
+.info
+	{
+
+}

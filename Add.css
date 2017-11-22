@@ -1,0 +1,104 @@
+nav
+{
+  background-color: greenyellow;
+  height: 50px;
+  text-align: center;
+  font-size: 32px;
+  margin: 0px;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  /*border-bottom: 2px solid teal;*/
+}
+.back /*back button*/
+{
+    float: left;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 14.75px;
+    width: 15%;
+    border-left: 3px solid greenyellow;
+    border-right: 3px solid greenyellow;
+    border-top: 3px solid greenyellow;
+    border-bottom: 2px solid greenyellow;
+    background-color: black;
+    color: greenyellow;
+}
+a
+  {
+    float: left;
+    position: fixed;
+    top: 7px;
+    left: 7px;
+    color: Black;
+  }
+  span  /*Title*/
+   {
+    position: fixed;
+    left: 100px;
+    top: 5px;
+  }
+form /*Activity form*/
+{
+  width: 120px;
+  display: inline-block;
+  float: left;
+}
+input /*Date, time, and Comments form*/
+{
+  width: 110px;
+  display: inline-block;
+  float: left;
+}
+.submit
+{
+  width: 60px;
+  text-align: center;
+  background-color: black;
+  color: greenyellow;
+}
+body /*below title segment*/
+ {
+  background-color: black;
+  margin: inherit;
+  font-size: 14px;
+}
+fieldset
+{
+  background-color: greenyellow;
+  color: black;
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  right: 10px;
+  border: 2px solid teal;
+}
+label /*Text for forms*/
+{
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 250px;
+  text-align: right;
+}
+.comments
+{
+  display: inline-block;
+  width: 200px;
+}
+.act-right
+{
+  display: inline-block;
+}
+.activity
+{
+  display: inline-block;
+  width: 70px;
+}
+.time {
+  width: 70px;
+}
+.date {
+  width: 70px;
+}

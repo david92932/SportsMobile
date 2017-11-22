@@ -1,118 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-
-    <!-- Required meta tags-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-
-    <!-- Your app title -->
-    <title>My App</title>
-
-    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
-        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
-     -->
-
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
-    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>Main Page</title>
+  <style type="text/css">
+  @import url("Index.css");
+  </style>
 </head>
-
+<header>
+  <nav class="topnav">
+    <a href="#" onclick="openNav()">
+      <svg width="30" height="30" id="icoOpen">
+        <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+        <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+        <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+      </svg>
+    </a>
+    <div class="plus">
+      <a href="CreateEvent.html">
+        <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+    <span class="title">
+      <strong> Active Events </strong>
+    </span>
+  </div>
+</nav>
+<div id="sideNavigation" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Features</a>
+  <a href="#">Contact Us</a>
+</div>
+<div class="main">
+  <nav class="nav">
+  </nav>
+</header>
 <body>
-    <!-- Status bar overlay for full screen mode (PhoneGap) -->
-    <div class="statusbar-overlay"></div>
+  <fieldset>
+    <table>
+      <tbody>
+        <tr class= "one">
+          <td class= "text-block">
+            <a href="EventInfo.html" style="text-decoration: none;">
+              <div class="sport">
+                Sport
+              </div>
+              <div class="time">
+                Time
+              </div>
+              <div class="date">
+                Date
+              </div>
+            </a>
+          </td>
+        </tr>
+        <!--<tr class= "one">
+        <td class= "sport">Sport </td>
+        <td class= "time">Time</td>
+        <td class= "date">Date</td>
+        <td class= "Location">Location</td>
+      </tr> -->
+    </tbody>
+  </table>
+</fieldset>
+<script src="https://use.fontawesome.com/82d08d9d0c.js"></script>
+<script>
+function openNav() {
+    document.getElementById("sideNavigation").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
 
-    <!-- Panels overlay-->
-    <div class="panel-overlay"></div>
-    <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-reveal">
-
-<!-- Menu Buttons -->
-        <div class="list-block">
-            <ul>
-                <li> 
-                    <a href = "#" class="item-link list-button"> Favorites</a>
-                </li>
-
-                <li>
-                    <a href = "#" class="item-link list-button">All Events</a>
-                </li>
-
-                <li>
-                    <a href = "#" class="item-link list-button">Create an Event</a>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-
-    <!-- Views -->
-    <div class="views">
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-            <!-- Top Navbar-->
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-                    <div class="center sliding">All Events</div>
-                    <div class="Right">
-                        <!--
-                          Right link contains only icon - additional "icon-only" class
-                          Additional "open-panel" class tells app to open panel when we click on this link
-                        -->
-                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
-            <div class="pages navbar-through toolbar-through">
-                <!-- Page, "data-page" contains page name -->
-                <div data-page="index" class="page">
-<!-- Events Table -->
-                    <!-- Scrollable page content -->
-                    <div class="page-content">
-                        <div class="content-block-title">General Events</div>
-                        <div class="list-block media-list">
-                            <ul>
-                                <li>
-                                    <a href="#" class="item-link item-content">
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
-                                                <div class="item-title">Football</div>
-                                                <div class="item-after">8:00PM</div>
-                                            </div>
-                                            <div class="item-subtitle">Behrend Fields</div>
-                                            <div class="item-text">This event is going to be totally WICKED!</div>
-                                        </div>
-                                    </a>
-                                </li>
-                                ...
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
-    <script type="text/javascript" src="js/my-app.js"></script>
+function closeNav() {
+    document.getElementById("sideNavigation").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
+</script>
 </body>
-
+</div>
 </html>
